@@ -2800,12 +2800,12 @@ nav.template-main-menu > ul > li:hover .template-mega-menu {
 .header-menu.menu-layout1.rt-sticky .header-action-layout1 ul .offcanvas-menu-trigger-wrap .offcanvas-menu-btn {
   box-shadow: none;
 }
-.header-menu.menu-layout1.rt-sticky .logo-area .temp-logo {
-  display: none;
-}
+.header-menu.menu-layout1.rt-sticky .logo-area .temp-logo,
 .header-menu.menu-layout1.rt-sticky .logo-area .sticky-logo {
-  display: block;
+  max-width: 100%; /* Ensure the logo fills its container */
+  height: auto; /* Maintain the aspect ratio and responsiveness */
 }
+
 .header-menu.menu-layout2.rt-sticky {
   background-color: #07249e;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
@@ -2827,6 +2827,7 @@ nav.template-main-menu > ul > li:hover .template-mega-menu {
 @media only screen and (max-width: 991px) {
   .hide-on-mobile-menu {
     display: none;
+    
   }
 }
 .header-action-layout1 ul {
@@ -3138,6 +3139,12 @@ nav.template-main-menu > ul > li:hover .template-mega-menu {
 }
 .offcanvas-menu-wrap .offcanvas-content .offcanvas-logo a {
   display: block;
+  text-align: center; /* Center the logo */
+}
+
+.offcanvas-menu-wrap .offcanvas-content .offcanvas-logo a img {
+  max-width: 100%; /* Make the logo responsive */
+  height: auto;
 }
 .offcanvas-menu-wrap .offcanvas-content .offcanvas-menu {
   text-align: center;
@@ -3213,9 +3220,12 @@ div#wrapper.open > .offcanvas-mask {
 }
 .mean-container .mean-bar a.logo-mobile-menu {
   width: 100%;
+  max-width: 100%; /* Ensure the logo fills the container */
+  height: auto; /* Maintain the aspect ratio and responsiveness */
   background-color: rgba(222, 222, 222, 0.95);
   box-sizing: border-box;
 }
+
 .mean-container .mean-bar .mobile-menu-nav-back {
   padding-left: 15px;
   border-bottom: 1px solid #b2b2b2;
@@ -3256,6 +3266,7 @@ div#wrapper.open > .offcanvas-mask {
   background-color: #ebebeb;
   transition: all 0.5s ease-out;
 }
+
 .mean-container .mean-nav > ul > li > a:hover {
   color: #07249e;
 }
